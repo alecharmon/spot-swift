@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Api",
+    name: "SpotSwift",
     platforms: [
         .iOS(.v15),
         .macOS(.v12),
@@ -12,19 +12,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Api",
-            targets: ["Api"]
+            name: "SpotSwift",
+            targets: ["SpotSwift"]
         )
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Api",
+            name: "SpotSwift",
             path: "Sources"
         ),
         .testTarget(
-            name: "ApiTests",
-            dependencies: ["Api"],
+            name: "SpotSwiftTests",
+            dependencies: ["SpotSwift"],
             path: "Tests"
         )
     ]
