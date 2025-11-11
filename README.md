@@ -1,6 +1,6 @@
 # Spot Swift Library
 
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=Spot%2FSwift)
+[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Falecharmon%2Fspot-swift)
 ![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-orange.svg)
 
 The Spot Swift library provides convenient access to the Spot APIs from Swift.
@@ -20,13 +20,13 @@ With Swift Package Manager (SPM), add the following to the top-level `dependenci
 
 ```swift
 dependencies: [
-    .package(url: "<git-url>", from: "0.1.0"),
+    .package(url: "https://github.com/alecharmon/spot-swift", from: "0.0.2"),
 ]
 ```
 
 ## Reference
 
-A full reference for this library is available [here](./reference.md).
+A full reference for this library is available [here](https://github.com/alecharmon/spot-swift/blob/HEAD/./reference.md).
 
 ## Usage
 
