@@ -286,4 +286,20 @@ public final class ApiClient: Sendable {
             responseType: GetFriendsIdResponse.self
         )
     }
+
+    /// Search for users by handle
+    ///
+    /// - Parameter requestOptions: Additional options for configuring the request, such as custom headers or timeout settings.
+    public func getUsersSearch(username: String, limit: Int? = nil, requestOptions: RequestOptions? = nil) async throws -> GetUsersSearchResponse {
+        return try await httpClient.performRequest(
+            method: .get,
+            path: "/users/search",
+            queryParams: [
+                "username": .string(username), 
+                "limit": limit.map { .int($0) }
+            ],
+            requestOptions: requestOptions,
+            responseType: GetUsersSearchResponse.self
+        )
+    }
 }
