@@ -20,7 +20,7 @@ With Swift Package Manager (SPM), add the following to the top-level `dependenci
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/alecharmon/spot-swift", from: "0.0.5"),
+    .package(url: "https://github.com/alecharmon/spot-swift", from: "0.0.6"),
 ]
 ```
 
