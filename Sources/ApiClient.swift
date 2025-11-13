@@ -271,6 +271,31 @@ public final class ApiClient: Sendable {
         )
     }
 
+    /// Create a friend request
+    ///
+    /// - Parameter requestOptions: Additional options for configuring the request, such as custom headers or timeout settings.
+    public func postFriendsRequests(request: Requests.PostFriendsRequestsRequest, requestOptions: RequestOptions? = nil) async throws -> PostFriendsRequestsResponse {
+        return try await httpClient.performRequest(
+            method: .post,
+            path: "/friends/requests",
+            body: request,
+            requestOptions: requestOptions,
+            responseType: PostFriendsRequestsResponse.self
+        )
+    }
+
+    /// Confirm (approve) a pending friend request
+    ///
+    /// - Parameter requestOptions: Additional options for configuring the request, such as custom headers or timeout settings.
+    public func postFriendsRequestsIdConfirm(id: String, requestOptions: RequestOptions? = nil) async throws -> PostFriendsRequestsIdConfirmResponse {
+        return try await httpClient.performRequest(
+            method: .post,
+            path: "/friends/requests/\(id)/confirm",
+            requestOptions: requestOptions,
+            responseType: PostFriendsRequestsIdConfirmResponse.self
+        )
+    }
+
     /// Fetch a friend profile and their liked POIs
     ///
     /// - Parameter requestOptions: Additional options for configuring the request, such as custom headers or timeout settings.
